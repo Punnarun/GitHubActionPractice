@@ -4,10 +4,17 @@ const dayOfTheWeek = (date = new Date()) => {
     return days[date.getDay()];
 }
 
+const monthOfYear = (date = new Date()) => {
+    const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    return month[date.getMonth()];
+}
+
 
 try {
     document.getElementById('day').innerText = dayOfTheWeek();
+    document.getElementById('month').innerText = monthOfYear();
 } catch(err) {}
 
 
 exports.dayOfTheWeek = dayOfTheWeek;
+exports.monthOfYear = monthOfYear;
